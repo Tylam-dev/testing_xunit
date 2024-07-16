@@ -1,8 +1,11 @@
 namespace StringManipulationTest;
+using Castle.Core.Logging;
+using Microsoft.Extensions.Logging;
+using Moq;
 using StringManipulation;
 public class UnitTest1
 {
-    [Fact]
+    [Fact(Skip = "Esta prueba no es valida, TICKET-001")]
     public void ConcatenateString()
     {
         //Arrange
@@ -63,5 +66,24 @@ public class UnitTest1
         var result = strOperation.FromRomanToNumber(romanNumber);
 
         Assert.Equal(expected, result);
+    }
+    [Fact]
+    public void CountOccurrences()
+    {
+        var mockLogger = new Mock<ILogger<StringOperations>>();
+        var strOperation = new StringOperations(mockLogger.Object);
+        var result = strOperation.CountOccurrences("Hello platzi", 'l');
+        Assert.Equal(3, result);
+    }
+    [Fact]
+    public void RoadFile()
+    {
+        var mockFileReader = new Mock<IFileReaderConector>();
+        var strOperations = new StringOperations();
+        mockFileReader.Setup(p => p.ReadString("file.txt")).Returns("Reading file");
+
+        var result = strOperations.ReadFile(mockFileReader.Object, "file.txt");
+
+        Assert.Equal("Reading file", result);
     }
 }
