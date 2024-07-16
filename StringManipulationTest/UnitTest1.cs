@@ -15,25 +15,17 @@ public class UnitTest1
         Assert.Equal("Hello Platzi", result);
     }
 
-    [Fact]
-    public void IsPalindrome_True()
+    [Theory]
+    [InlineData("ana", true)]
+    [InlineData("casa", false)]
+    public void IsPalindrome(string word, Boolean expected)
     {
         //Arrange
         var stroperations = new StringOperations();
         //Act
-        var result = stroperations.IsPalindrome("ana");
+        var result = stroperations.IsPalindrome(word);
         //Assert
-        Assert.True(result);
-    }
-        [Fact]
-    public void IsPalindrome_False()
-    {
-        //Arrange
-        var stroperations = new StringOperations();
-        //Act
-        var result = stroperations.IsPalindrome("hello");
-        //Assert
-        Assert.False(result);
+        Assert.Equal(result, expected);
     }
     
     [Fact]
@@ -60,5 +52,16 @@ public class UnitTest1
     {
         var strOperation = new StringOperations();
         Assert.ThrowsAny<ArgumentNullException>(() => strOperation.GetStringLength(null));
+    }
+    [Theory]
+    [InlineData("V", 5)]
+    [InlineData("IV", 4)]
+    [InlineData("X", 10)]
+    public void FromRomanToNumber(string romanNumber, int expected)
+    {
+        var strOperation = new StringOperations();
+        var result = strOperation.FromRomanToNumber(romanNumber);
+
+        Assert.Equal(expected, result);
     }
 }
