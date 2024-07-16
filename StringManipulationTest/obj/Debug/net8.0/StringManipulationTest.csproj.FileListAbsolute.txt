@@ -164,3 +164,4 @@
 /Users/tyronevera/Documents/programacion/testing_xunit/StringManipulationTest/obj/Debug/net8.0/StringManipulationTest.pdb
 /Users/tyronevera/Documents/programacion/testing_xunit/StringManipulationTest/obj/Debug/net8.0/StringManipulationTest.genruntimeconfig.cache
 /Users/tyronevera/Documents/programacion/testing_xunit/StringManipulationTest/obj/Debug/net8.0/ref/StringManipulationTest.dll
+/Users/tyronevera/Documents/programacion/testing_xunit/StringManipulationTest/obj/Debug/net8.0/StringManipulationTest.sourcelink.json

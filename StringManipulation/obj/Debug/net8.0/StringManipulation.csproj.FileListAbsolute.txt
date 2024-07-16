@@ -76,3 +76,4 @@
 /Users/tyronevera/Documents/programacion/testing_xunit/StringManipulation/obj/Debug/net8.0/StringManipulation.pdb
 /Users/tyronevera/Documents/programacion/testing_xunit/StringManipulation/obj/Debug/net8.0/StringManipulation.genruntimeconfig.cache
 /Users/tyronevera/Documents/programacion/testing_xunit/StringManipulation/obj/Debug/net8.0/ref/StringManipulation.dll
+/Users/tyronevera/Documents/programacion/testing_xunit/StringManipulation/obj/Debug/net8.0/StringManipulation.sourcelink.json
